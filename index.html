@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="curtir()">Gostei 👍</button>
+<p>Curtidas: <span id="contador"></span></p>
+
+<script>
+  let total = localStorage.getItem("curtidas") || 0;
+  document.getElementById("contador").innerText = total;
+
+  function curtir() {
+    total++;
+    localStorage.setItem("curtidas", total);
+    document.getElementById("contador").innerText = total;
+  }
+</script>
+
+</body>
+</html>
